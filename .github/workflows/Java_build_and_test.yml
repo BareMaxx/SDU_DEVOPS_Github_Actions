@@ -1,5 +1,9 @@
-name: hello-world
-on: push
+name: JavaBuild
+on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [master]
 env:
   docker_username: ${{ github.actor }}
   docker_password: ${{ secrets.GITHUB_TOKEN }}
